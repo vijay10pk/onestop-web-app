@@ -1,6 +1,7 @@
 import React, { Fragment, useState } from 'react'
 import Login from './Pages/Login'
 import Register from './Pages/Register'
+import Header from './Components/shared/header'
 import ac from './images/ac.png'
 import carpenter from "./images/carpenter.png"
 import cleaning from './images/cleaning.png'

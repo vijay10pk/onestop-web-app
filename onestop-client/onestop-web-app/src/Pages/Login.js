@@ -1,5 +1,7 @@
 import React, { Fragment, useState } from 'react'
 import { AiOutlineClose } from "react-icons/ai";
+import LoginForm from '../Components/LoginForm';
+import SignUpForm from '../Components/SignUpForm';
 
 const Login = ({closeClick}) => {
 
@@ -14,23 +16,13 @@ const Login = ({closeClick}) => {
                 {signUp ? (
                     <>
                     <h2>{signUp?"Sign Up":"Login"}</h2>
-                    <form action="">
-                        <input className='form-control' type="text" placeholder='Enter Full Name' />
-                        <input className='form-control' type="text" placeholder='Enter Mobile Number' />
-                        <input className='form-control' type="text" placeholder='Enter Email' />
-                        <input className='form-control' type="text" placeholder='Enter Password' />
-                        <input className='form-control' type="text" placeholder='Confirm Password' /><br />
-                        <button className='btn btn-dark' id='submit'>Sign Up</button>
-                    </form>
+                    <SignUpForm/>
                     </>
                 ):(
                 <>
                 <h2>Login</h2>
-                <form action="">
-                    <input className='form-control' type="text" placeholder="Username" />
-                    <input className='form-control' type="text" placeholder='Password' /><br />
-                    <button className='btn btn-dark' id='submit'>Login</button>
-                </form></>
+                <LoginForm/>
+                </>
                 )}
                 <button id='signup' onClick={()=> setSignup(!signUp)}>{signUp?"Have an account? Login":"Don't have an account? Sign Up"}</button>
             </div>
