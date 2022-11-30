@@ -1,11 +1,13 @@
 import React, { Fragment } from 'react'
 import { AiOutlineClose } from "react-icons/ai";
+import { Link } from 'react-router-dom';
 
 const Register = ({removeClick,changeClick}) => {
+
     return (
         <Fragment>
             <section id='login'>
-                <button id='icon' onClick={removeClick}><AiOutlineClose></AiOutlineClose></button>
+                <Link to='/' ><button id='icon' ><AiOutlineClose></AiOutlineClose></button></Link>
                 <div id='form'>
                     <h2>Register as a professional</h2>
                     <form action="">
