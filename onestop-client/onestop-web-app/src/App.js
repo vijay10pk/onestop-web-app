@@ -19,16 +19,14 @@ import { AiOutlineSearch } from 'react-icons/ai'
 
 const App = () => {
   return (
-    
-      <Router>
-        <Routes>
-          <Route exact path='/' element={<Homepage />} />
-          <Route path='/login' element={<Login />} />
-          <Route path='/register' element={<Register/>} />
-          <Route path='/about' element={<About />} />
-        </Routes>
-      </Router>
-    
+    <Router>
+      <Routes>
+        <Route exact path='/' element={<Homepage />} />
+        <Route path='/login' element={<Login />} />
+        <Route path='/register' element={<Register />} />
+        <Route path='/about' element={<About />} />
+      </Routes>
+    </Router>
   )
 }
 
