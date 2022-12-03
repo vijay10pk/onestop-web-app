@@ -43,7 +43,6 @@ const LoginForm = () => {
   };
   return (
     <>
-    <Card>
     <section className='heading'>
           <h1>
             <FaSignInAlt /> Login
@@ -83,7 +82,6 @@ const LoginForm = () => {
             </div>
           </form>
         </section>
-        </Card>
         </>
   );
 };
