@@ -39,6 +39,7 @@ const SignUpForm = ()=> {
       alert(error.response.data.message);
     }
   }
+}
 
   return (
     <>
@@ -49,7 +50,7 @@ const SignUpForm = ()=> {
         <p>Please create an account</p>
       </section>
 
-      <section className='form'>
+       <section className='form'>
         <form onSubmit={onSubmit}>
           <div className='form-group'>
             <input
@@ -117,5 +118,4 @@ const SignUpForm = ()=> {
   );
 }
 
-}
 export default SignUpForm;

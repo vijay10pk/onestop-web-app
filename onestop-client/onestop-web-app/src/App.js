@@ -17,6 +17,7 @@ import spa from './images/spa.png'
 import paint from './images/paint.png'
 import { AiOutlineSearch } from 'react-icons/ai'
 import Navbar from './Pages/Navbar'
+import SignUpForm from './Components/SignUpForm'
 
 const App = () => {
   return (
