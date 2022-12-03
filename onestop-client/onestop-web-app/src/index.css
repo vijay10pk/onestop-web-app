@@ -46,7 +46,6 @@ nav button{
 
 #homepage{
   margin: 5rem auto;
-  width: 60%;
   padding: 20px 0px;
   border-radius: 3px;
   display: flex;
@@ -56,7 +55,7 @@ nav button{
   box-shadow: 0px 5px 10px black;
 }
 
-section div{
+section .service-images{
   width: 150px;
   height: 100px;
   padding: 20px 10px 0px;
@@ -99,7 +98,7 @@ section img{
   border-color: transparent;
 }
 
-#form{
+/*#form{
   padding-top: 4rem;
   width: 60%;
   margin: auto;
@@ -107,13 +106,13 @@ section img{
 
 input{
   margin-top: 1rem;
-  /* padding-left: 20px;
+  padding-left: 20px;
   padding-top: 5px;
   padding-bottom: 5px;
-  border-radius: 5px; */
+  border-radius: 5px;
 }
 
-/* #submit{
+#submit{
   border-radius: 5px;
   background-color: black;
   cursor: pointer;
@@ -152,4 +151,105 @@ select{
 .titles{
   padding: 20px;
   text-align: center;
+}
+/* ---------------------------- */
+
+.container {
+  max-width: 800px;
+  margin: auto;
+  padding: 0 20px;
+}
+
+.card {
+  background-color: #fff;
+  color: #333;
+  border-radius: 15px;
+  padding: 40px 50px;
+  margin: 20px 0;
+  position: relative;
+}
+
+.card.reverse {
+  background-color: rgba(0, 0, 0, 0.4);
+  color: #fff;
+}
+
+.card h2 {
+  font-size: 22px;
+  font-weight: 600;
+  text-align: center;
+}
+
+/* ---------------------- */
+.form,
+.content {
+  width: 70%;
+  margin: 0 auto;
+}
+
+.form-group {
+  margin-bottom: 10px;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #e6e6e6;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  font-family: inherit;
+}
+
+.form-group label {
+  text-align: left;
+  display: block;
+  margin: 0 0 5px 3px;
+}
+
+.heading {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 50px;
+  padding: 0 20px;
+}
+
+.heading p {
+  color: #828282;
+}
+
+.btn2 {
+  padding: 10px 20px;
+  border: 1px solid #000;
+  border-radius: 5px;
+  background: #000;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  text-align: center;
+  appearance: button;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn2 svg {
+  margin-right: 8px;
+}
+
+.btn2-reverse {
+  background: #fff;
+  color: #000;
+}
+
+.btn2-block {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.btn2:hover {
+  transform: scale(0.98);
 }

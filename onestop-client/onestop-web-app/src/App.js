@@ -16,16 +16,20 @@ import pest from './images/pest.png'
 import spa from './images/spa.png'
 import paint from './images/paint.png'
 import { AiOutlineSearch } from 'react-icons/ai'
+import Navbar from './Pages/Navbar'
 
 const App = () => {
   return (
     <Router>
-      <Routes>
-        <Route exact path='/' element={<Homepage />} />
-        <Route path='/login' element={<Login />} />
-        <Route path='/register' element={<Register />} />
-        <Route path='/about' element={<About />} />
-      </Routes>
+    <Navbar/>
+    <div className='container'>
+        <Routes>
+          <Route exact path='/' element={<Homepage />} />
+          <Route path='/login' element={<Login />} />
+          <Route path='/register' element={<Register/>} />
+          <Route path='/about' element={<About />} />
+        </Routes>
+      </div>  
     </Router>
   )
 }
