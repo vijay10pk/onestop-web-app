@@ -1,0 +1,819 @@
+[
+    {
+        "category":"Salon",
+        "sub_category":[
+            {
+                "subCategoryName" : "Man",
+                "services":[
+                    {
+                        "_id": "1",
+                        "name": "haircut",
+                        "description": "Haircut as per face shape & preferance",
+                        "category": "men_haircut",
+                        "price": 14.99,
+                        "image": "haircut.png"
+                    },{
+                        "_id": "2",
+                        "name": "haircolor",
+                        "description": "Mess free & uniform application for desired results",
+                        "category": "men_haircut",
+                        "price": 34.99,
+                        "image": "haircolor.png"
+                    },{
+                        "_id": "3",
+                        "name": "facial",
+                        "description": "Extensive detan process to remove dirt & tan",
+                        "category": "men_haircut",
+                        "price": 19.99,
+                        "image": "facial.png"
+                    },{
+                        "_id": "4",
+                        "name": "shaving",
+                        "description": "Clean shave or beard styling as per preference",
+                        "category": "men_haircut",
+                        "price": 12.99,
+                        "image": "shaving.png"
+                    },{
+                        "_id": "5",
+                        "name": "kids haircut",
+                        "description": "Haircut as per face shape & preferance",
+                        "category": "men_haircut",
+                        "price": 9.99,
+                        "image": "kids_haircut.png"
+                    }
+                ]
+            },
+            
+            {
+                "subCategoryName" : "Woman",
+                "services":[
+                    {
+                        "_id": "6",
+                        "name": "haircut",
+                        "description": "Haircut as per face shape & preferance",
+                        "category": "women_haircut",
+                        "price": 24.99,
+                        "image": "haircut.png"
+                    },{
+                        "_id": "7",
+                        "name": "facial",
+                        "description": "Extensive detan process to remove dirt & tan",
+                        "category": "women_haircut",
+                        "price": 39.99,
+                        "image": "facial.png"
+                    },{
+                        "_id": "8",
+                        "name": "detan",
+                        "description": "Removal of tanning and marks",
+                        "category": "women_haircut",
+                        "price": 19.99,
+                        "image": "detan.png"
+                    },{
+                        "_id": "9",
+                        "name": "manicure",
+                        "description": "quick nail grooming session with nail polishing",
+                        "category": "women_haircut",
+                        "price": 21.99,
+                        "image": "manicure.png"
+                    },{
+                        "_id": "10",
+                        "name": "pedicure",
+                        "description": "Relaxing scrub, cream massage and mask for fresh feet",
+                        "category": "women_haircut",
+                        "price": 24.99,
+                        "image": "pedicure.png"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "category":"AC",
+        "sub_category":[
+            {
+                "subCategoryName" : "Window AC",
+                "services":[
+                    {
+                        "_id": "11",
+                        "name": "Window AC Deep Cleaning",
+                        "description": "AC deep cleaning with filter change",
+                        "category": "window_ac",
+                        "price": 32.99,
+                        "image": "wdeepclean.png"
+                    },{
+                        "_id": "12",
+                        "name": "Window AC Check up",
+                        "description": "AC basic servicing and checkup",
+                        "category": "window_ac",
+                        "price": 19.99,
+                        "image": "waccheckup.png"
+                    },{
+                        "_id": "13",
+                        "name": "Window AC Installation",
+                        "description": "AC installation with free gas check and drilling",
+                        "category": "window_ac",
+                        "price": 29.99,
+                        "image": "winstallation.png"
+                
+                        }
+                ]
+            },{
+                "subCategoryName" : "Split AC",
+                "services":[
+                    {
+                        "_id": "14",
+                        "name": "Split AC Deep Cleaning",
+                        "description": "AC deep cleaning with filter change",
+                        "category": "split_ac",
+                        "price": 39.99,
+                        "image": "sdeepcleaning.png"
+                    },{
+                        "_id": "15",
+                        "name": "Split AC Check up",
+                        "description": "AC basic servicing and checkup",
+                        "category": "split_ac",
+                        "price": 24.99,
+                        "image": "saccheckup.png"
+                    },{
+                        "_id": "16",
+                        "name": "Gas refilling",
+                        "description": "gas refilling and service",
+                        "category": "split_ac",
+                        "price": 44.99,
+                        "image": "sgaschange.png"
+                
+                    },{
+                        "_id": "17",
+                        "name": "Installation",
+                        "description": "AC installation with free gas check and drilling",
+                        "category": "split_ac",
+                        "price": 29.99,
+                        "image": "sinstallation.png"
+                
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "category":"electrician",
+        "sub_category":[
+            {
+                "subCategoryName" : "switch",
+                "services":[
+                    {
+                        "_id": "18",
+                        "name": "Switch replacement",
+                        "description": "Replacement of single switch",
+                        "category": "switch",
+                        "price": 8.99,
+                        "image": "switchreplace.png"
+                    },{
+                        "_id": "19",
+                        "name": "Socket replacement",
+                        "description": "Replacement of single socket",
+                        "category": "switch",
+                        "price": 9.99,
+                        "image": "switchreplace.png"
+                    },{
+                        "_id": "20",
+                        "name": "Switch Board repair",
+                        "description": "Repair or replacement of Single switch board",
+                        "category": "switch",
+                        "price": 11.99,
+                        "image": "switchboard.png"
+                
+                        }
+                ]
+            },{
+                "subCategoryName" : "Fan",
+                "services":[
+                    {
+                        "_id": "21",
+                        "name": "Fan repair",
+                        "description": "Repair of Ceiling Fan",
+                        "category": "fan",
+                        "price": 15.99,
+                        "image": "fan.png"
+                    },{
+                        "_id": "22",
+                        "name": "Fan Installation",
+                        "description": "Installation of Ceiling, exhaust or wall fan",
+                        "category": "fan",
+                        "price": 12.99,
+                        "image": "faninstall.png"
+                    },{
+                        "_id": "23",
+                        "name": "Fan Replacement",
+                        "description": "Replacement of Ceiling, exhaust or wall fan",
+                        "category": "fan",
+                        "price": 17.99,
+                        "image": "fanreplace.png"
+                    }
+                ]
+            },{
+                "subCategoryName" : "light",
+                "services":[
+                    {
+                        "_id": "24",
+                        "name": "Light installation/Repair",
+                        "description": "Installation or replait of a single light",
+                        "category": "light",
+                        "price": 9.99,
+                        "image": "light.png"
+                    },{
+                        "_id": "25",
+                        "name": "Strip Light Installation",
+                        "description": "Installation of Strip lights (per 5m)",
+                        "category": "light",
+                        "price": 12.99,
+                        "image": "decorlights.png"
+                    },{
+                        "_id": "26",
+                        "name": "Chandelier Installation",
+                        "description": "Installation of Chandelier",
+                        "category": "light",
+                        "price": 39.99,
+                        "image": "Chandelierinstall.png"
+                    }
+                ]
+            },{
+                "subCategoryName" : "others",
+                "services":[
+                    {
+                        "_id": "27",
+                        "name": "CCTV installation/Repair",
+                        "description": "Installation/ repair of Security cameras",
+                        "category": "others",
+                        "price": 29.99,
+                        "image": "CCTV.png"
+                    },{
+                        "_id": "28",
+                        "name": "Home Video Bell",
+                        "description": "Installation of video bell",
+                        "category": "others",
+                        "price": 15.99,
+                        "image": "videobell.png"
+                    },{
+                        "_id": "29",
+                        "name": "Inverter Installation",
+                        "description": "Installation of Home Inverter",
+                        "category": "others",
+                        "price": 24.99,
+                        "image": "inverter.png"
+                    }
+                ]
+            },{
+                "subCategoryName" : "MCB",
+                "services":[
+                    {
+                        "_id": "30",
+                        "name": "Changeover switch Installation",
+                        "description": "Installation/ repair of 3 phase changeover switch",
+                        "category": "MCB",
+                        "price": 10.99,
+                        "image": "changeoverswitch.png"
+                    },{
+                        "_id": "31",
+                        "name": "MCB fuse replacement",
+                        "description": "Replacement of a single MCB fuse",
+                        "category": "MCB",
+                        "price": 15.99,
+                        "image": "MCB.png"
+                    },{
+                        "_id": "32",
+                        "name": "Single Pole MCB Installation",
+                        "description": "Installation of a single pole MCB",
+                        "category": "MCB",
+                        "price": 12.99,
+                        "image": "singlepole.png"
+                    }
+                ]
+            },{
+                "subCategoryName" : "Custom Repair",
+                "services":[
+                    {
+                        "_id": "33",
+                        "name": "Custom Repair/ Installation",
+                        "description": "Actual charges based on scope of work",
+                        "category": "Custom Repair",
+                        "price": 9.99,
+                        "image": "changeoverswitch.png"
+                    }
+                ]
+            }
+        ]
+    },{
+        "category":"Painting",
+        "sub_category":[
+            {
+                "subCategoryName" : "Home Painting",
+                "services":[
+                    {
+                        "_id": "34",
+                        "name": "Home Painting Consulation",
+                        "description": "Actual charges based on scope of work",
+                        "category": "home_painting",
+                        "price": 9.99,
+                        "image": "homepaint.png"
+                    },{
+                        "_id": "35",
+                        "name": "Texture Wall Painting",
+                        "description": "Texture wall painting upto 150sqft",
+                        "category": "home_painting",
+                        "price": 59.99,
+                        "image": "texturepaint.png"
+                    }
+                ]
+            },{
+                "subCategoryName" : "Water Proofing",
+                "services":[
+                    {
+                        "_id": "36",
+                        "name": "Home Water proofing Consulation",
+                        "description": "Actual charges based on scope of work",
+                        "category": "waterproofing",
+                        "price": 11.99,
+                        "image": "waterproof.png"
+                    },{
+                        "_id": "37",
+                        "name": "Ceiling leakage Repair",
+                        "description": "Repair and repainting of leakage area",
+                        "category": "waterproofing",
+                        "price": 24.99,
+                        "image": "leak.png"
+                    }
+                ]
+            }
+        ]
+    },{
+        "category":"Appliance Repair",
+        "sub_category":[
+            {
+                "subCategoryName" : "Microwave",
+                "services":[
+                    {
+                        "_id": "38",
+                        "name": "No Heating",
+                        "description": "Repair of microwave heating coil",
+                        "category": "microwave",
+                        "price": 19.99,
+                        "image": "microwave.png"
+                    },{
+                        "_id": "39",
+                        "name": "Button/Display not working",
+                        "description": "Repair or replacement of button/ display ",
+                        "category": "microwave",
+                        "price": 18.99,
+                        "image": "microwave.png"
+                    },{
+                        "_id": "40",
+                        "name": "Noise Issue",
+                        "description": "Diagnosis and Repair of Microwave",
+                        "category": "microwave",
+                        "price": 14.99,
+                        "image": "microwave.png"
+                    },{
+                        "_id": "41",
+                        "name": "Sparking Issue",
+                        "description": "Diagnosis and Repair of Electrical parts",
+                        "category": "microwave",
+                        "price": 17.99,
+                        "image": "microwave.png"
+                    }
+                ]
+            },{
+                "subCategoryName" : "Refridgerator",
+                "services":[
+                    {
+                        "_id": "42",
+                        "name": "Less Cooling in both sections",
+                        "description": "Price includes visit & diagnosis",
+                        "category": "fridge",
+                        "price": 12.99,
+                        "image": "fridge.png"
+                    },{
+                        "_id": "43",
+                        "name": "Less Cooling in only refridgerator section",
+                        "description": "Price includes visit & diagnosis",
+                        "category": "fridge",
+                        "price": 10.99,
+                        "image": "fridge.png"
+                    },{
+                        "_id": "44",
+                        "name": "Gas refilling",
+                        "description": "Service & Gas refillng",
+                        "category": "fridge",
+                        "price": 29.99,
+                        "image": "fridge.png"
+                
+                    },{
+                        "_id": "45",
+                        "name": "No Power",
+                        "description": "Repair of Power issues",
+                        "category": "fridge",
+                        "price": 19.99,
+                        "image": "fridge.png"
+                
+                    }
+                ]
+            },{
+                "subCategoryName" : "Washing Machine",
+                "services":[
+                    {
+                        "_id": "46",
+                        "name": "Washing machine installation",
+                        "description": "Installation & demo of Washing Machine",
+                        "category": "washing_machine",
+                        "price": 18.99,
+                        "image": "washinstall.png"
+                    },{
+                        "_id": "47",
+                        "name": "No washing",
+                        "description": "Price includes visit & diagnosis",
+                        "category": "washing_machine",
+                        "price": 13.99,
+                        "image": "wash.png"
+                    },{
+                        "_id": "48",
+                        "name": "No drying",
+                        "description": "Price includes visit & diagnosis",
+                        "category": "washing_machine",
+                        "price": 12.99,
+                        "image": "wash.png"
+                
+                    },{
+                        "_id": "49",
+                        "name": "Water Leakage",
+                        "description": "Repair of water leakage",
+                        "category": "washing_machine",
+                        "price": 17.99,
+                        "image": "waterleak.png"
+                
+                    }
+                ]
+            },{
+                "subCategoryName" : "Television",
+                "services":[
+                    {
+                        "_id": "50",
+                        "name": "TV repair",
+                        "description": "Price includes visit & diagnosis",
+                        "category": "tv",
+                        "price": 11.99,
+                        "image": "tv.png"
+                    },{
+                        "_id": "51",
+                        "name": "Screen Replacement upto 40 inch",
+                        "description": "Replacement of TV screen upto 40 inch",
+                        "category": "tv",
+                        "price": 69.99,
+                        "image": "tvscreen.png"
+                    },{
+                        "_id": "52",
+                        "name": "Screen Replacement over 40 inch",
+                        "description": "Replacement of TV screen  over 40 inch",
+                        "category": "tv",
+                        "price": 99.99,
+                        "image": "tvscreen.png"
+                
+                    },{
+                        "_id": "53",
+                        "name": "TV Installation",
+                        "description": "Installation of TV upto 40 inch",
+                        "category": "tv",
+                        "price": 19.99,
+                        "image": "tvscreen.png"
+                
+                    },
+                    {
+                        "_id": "54",
+                        "name": "TV Installation over 40 inch",
+                        "description": "Installation of TV over 40 inch",
+                        "category": "tv",
+                        "price": 24.99,
+                        "image": "tvscreen.png"
+                
+                    }
+                ]
+            }
+        ]
+    },{
+        "category":"Plumbers & Carpenters",
+        "sub_category":[
+            {
+                "subCategoryName" : "Plumbers",
+                "services":[
+                    {
+                        "_id": "55",
+                        "name": "Tap Repair",
+                        "description": "Repair of one broken or leaking tap",
+                        "category": "plumbing",
+                        "price": 8.99,
+                        "image": "taprepair.png"
+                    },{
+                        "_id": "56",
+                        "name": "Waste pipe Leakage",
+                        "description": "Repair or replacement of one broken pipe",
+                        "category": "plumbing",
+                        "price": 9.99,
+                        "image": "pipe.png"
+                    },
+                    {
+                        "_id": "57",
+                        "name": "Flush tank Repair",
+                        "description": "Flush leakage and flush button replacement",
+                        "category": "plumbing",
+                        "price": 12.99,
+                        "image": "tank.png"
+                    },
+                    {
+                        "_id": "58",
+                        "name": "Wash basin repair",
+                        "description": "Wash basin leakage repair or replacement",
+                        "category": "plumbing",
+                        "price": 19.99,
+                        "image": "basin.png"
+                    },
+                    {
+                        "_id": "59",
+                        "name": "Bath fittings Installation",
+                        "description": "Bath fittings installation ",
+                        "category": "plumbing",
+                        "price": 14.99,
+                        "image": "shower.png"
+                    },
+                    {
+                        "_id": "60",
+                        "name": "Blockage Issue",
+                        "description": "Clearing the blockage",
+                        "category": "plumbing",
+                        "price": 9.99,
+                        "image": "block.png"
+                    }
+                ]
+            },{
+                "subCategoryName" : "Carpenter",
+                "services":[
+                    {
+                        "_id": "61",
+                        "name": "Drill & Hang",
+                        "description": "Installation of one Decor item",
+                        "category": "carpenter",
+                        "price": 6.99,
+                        "image": "hang.png"
+                    },{
+                        "_id": "62",
+                        "name": "Door Repair",
+                        "description": "Repair of door which is not closing",
+                        "category": "carpenter",
+                        "price": 14.99,
+                        "image": "leak.png"
+                    },{
+                        "_id": "63",
+                        "name": "Cupboard hinge service",
+                        "description": "Installation or repair of hinges",
+                        "category": "carpenter",
+                        "price": 6.99,
+                        "image": "hinge.png"
+                    },
+                    {
+                        "_id": "64",
+                        "name": "Blinds Installation or Repair",
+                        "description": "Installation or repair of Blinds",
+                        "category": "carpenter",
+                        "price": 9.99,
+                        "image": "blinds.png"
+                    },{
+                        "_id": "65",
+                        "name": "Lock Installation",
+                        "description": "Installation or repair of Door Lock",
+                        "category": "carpenter",
+                        "price": 11.99,
+                        "image": "lock.png" 
+                    }
+                ]
+            }
+        ]
+    },{
+        "category":"Spa",
+        "sub_category":[
+            {
+                "subCategoryName" : "Spa Prime",
+                "services":[
+                    {
+                        "_id": "66",
+                        "name": "Stress relief therapy & Head Massage",
+                        "description": "Stress Relief therapy for 1 hour",
+                        "category": "spa_prime",
+                        "price": 31.99,
+                        "image": "stress.png"
+                    },{
+                        "_id": "67",
+                        "name": "Pain relief therapy & Head Massage",
+                        "description": "Pain Relief therapy for 1 hour",
+                        "category": "spa_prime",
+                        "price": 36.99,
+                        "image": "pain.png"
+                    },
+                    {
+                        "_id": "68",
+                        "name": "Sleep therapy",
+                        "description": "Full body massage with gentle strokes",
+                        "category": "spa_prime",
+                        "price": 34.99,
+                        "image": "sleep.png"
+                    },
+                    {
+                        "_id": "69",
+                        "name": "Coffee body detan therapy",
+                        "description": "Full body scrub and foot massage",
+                        "category": "spa_prime",
+                        "price": 24.99,
+                        "image": "sleep.png"
+                    }
+                ]
+            },{
+                "subCategoryName" : "Spa Classic",
+                "services":[
+                    {
+                        "_id": "70",
+                        "name": "Head & Shoulder Massage",
+                        "description": "Express Head & shoulder massage",
+                        "category": "spa_classic",
+                        "price": 21.99,
+                        "image": "head.png"
+                    },{
+                        "_id": "71",
+                        "name": "Relaxing Foot Massage",
+                        "description": "Foot massage to alleviate soreness",
+                        "category": "spa_classic",
+                        "price": 19.99,
+                        "image": "foot.png"
+                    },
+                    {
+                        "_id": "72",
+                        "name": "Eye Treatment",
+                        "description": "Gentle pressure massage",
+                        "category": "spa_classic",
+                        "price": 14.99,
+                        "image": "eye.png"
+                    },
+                    {
+                        "_id": "73",
+                        "name": "Special Massage",
+                        "description": "Make your own massage therapy (30 mins)",
+                        "category": "spa_classic",
+                        "price": 24.99,
+                        "image": "sleep.png"
+                    }
+                ]
+            }
+        ]
+    },{
+        "category":"Cleaning & Pest Control",
+        "sub_category":[
+            {
+                "subCategoryName" : "Bathroom & Kitchen Cleaning",
+                "services":[
+                    {
+                        "_id": "74",
+                        "name": "Bathroom Cleaning",
+                        "description": "Dirt and Black stain removal",
+                        "category": "bathroom_cleaning",
+                        "price": 19.99,
+                        "image": "bathroom.png"
+                    },{
+                        "_id": "75",
+                        "name": "Intense Bathroom Cleaning",
+                        "description": "Hard water stains and dirt removal with machine",
+                        "category": "bathroom_cleaning",
+                        "price": 29.99,
+                        "image": "bathroom.png"
+                    },{
+                        "_id": "76",
+                        "name": "Kitchen Cleaning",
+                        "description": "Dirt and stain removal from kitchen slab",
+                        "category": "bathroom_cleaning",
+                        "price": 24.99,
+                        "image": "bathroom.png"
+                    },{
+                        "_id": "77",
+                        "name": "Chimney Cleaning",
+                        "description": "Degreasing & stain removal of one chimney",
+                        "category": "bathroom_cleaning",
+                        "price": 18.99,
+                        "image": "chimney.png"
+                    }
+                ]
+            },{
+                "subCategoryName" : "Full Home Cleaning",
+                "services":[
+                    {
+                        "_id": "78",
+                        "name": "Bedroom Cleaning",
+                        "description": "Floor, Mattress and curtain cleaning",
+                        "category": "home_cleaning",
+                        "price": 15.99,
+                        "image": "bedroom.png"
+                    },{
+                        "_id": "79",
+                        "name": "Living Room Cleaning",
+                        "description": "Cleaning of Floor, Walls, Sofa, decor etc",
+                        "category": "home_cleaning",
+                        "price": 30.99,
+                        "image": "hall.png"
+                    },{
+                        "_id": "80",
+                        "name": "Premium 2BHK Home Cleaning",
+                        "description": "Deep Cleaning of bedroom, Living room, bathroom, Hall & Kitchen",
+                        "category": "home_cleaning",
+                        "price": 69.99,
+                        "image": "2b.png"
+                
+                    },{
+                        "_id": "81",
+                        "name": "Premium 3BHK Home Cleaning",
+                        "description": "Deep Cleaning of bedroom, Living room, bathroom, Hall & Kitchen",
+                        "category": "home_cleaning",
+                        "price": 99.99,
+                        "image": "full.png"
+                
+                    },
+                    {
+                        "_id": "82",
+                        "name": "Platinum House Clean",
+                        "description": "Deep Cleaning of Complete house and accessories",
+                        "category": "home_cleaning",
+                        "price": 169.99,
+                        "image": "platinum.png"
+                
+                    }
+                ]
+            },{
+                "subCategoryName" : "Sofa & Carpet Cleaning",
+                "services":[
+                    {
+                        "_id": "83",
+                        "name": "Sofa Cleaning",
+                        "description": "Shampooing & vacumming sofa",
+                        "category": "sofa_cleaning",
+                        "price": 29.99,
+                        "image": "cushion.png"
+                    },{
+                        "_id": "84",
+                        "name": "Carpet Cleaning",
+                        "description": "Dry vacumming to remove patches and crumbs",
+                        "category": "sofa_cleaning",
+                        "price": 19.99,
+                        "image": "carpet.png"
+                    },{
+                        "_id": "85",
+                        "name": "Dining Table Cleaning",
+                        "description": "Cleaning of 1 Dining table and chairs",
+                        "category": "sofa_cleaning",
+                        "price": 24.99,
+                        "image": "table.png"
+                
+                    },{
+                        "_id": "86",
+                        "name": "Mattress Cleaning",
+                        "description": "Dry wash cleaning single mattress",
+                        "category": "sofa_cleaning",
+                        "price": 15.99,
+                        "image": "mattressclean.png"
+                
+                    }
+                ]
+            },{
+                "subCategoryName" : "Cockroach, Ants & Pest Control",
+                "services":[
+                    {
+                        "_id": "87",
+                        "name": "Bathroom & Kitchen Pest Removal",
+                        "description": "Pest treatment in Bathroom and Kitchen with 2 visits",
+                        "category": "pest",
+                        "price": 19.99,
+                        "image": "pest.png"
+                    },{
+                        "_id": "88",
+                        "name": "Apartment Pest Control",
+                        "description": "Pest treatment with 2 visits",
+                        "category": "pest",
+                        "price": 39.99,
+                        "image": "apartment.png"
+                    },{
+                        "_id": "89",
+                        "name": "Bungalow Pest Control",
+                        "description": "Pest treatment with 2 visits",
+                        "category": "pest",
+                        "price": 54.99,
+                        "image": "bungalow.png"
+                
+                    }
+                ]
+            }
+        ]
+    }
+    
+]

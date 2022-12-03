@@ -270,32 +270,140 @@
     "Water Proofing":[{
         "_id": "35",
         "name": "Home Water proofing Consulation",
-        "description": "best in class AC deep cleaning by professionals",
-        "category": "split_ac",
-        "price": 40,
-        "image": "sdeepcleaning.png"
+        "description": "Actual charges based on scope of work",
+        "category": "waterproofing",
+        "price": 10,
+        "image": "waterproof.png"
     },{
-        "_id": "15",
-        "name": "Split AC Check up",
-        "description": "best in class AC check up by professionals",
-        "category": "split_ac",
+        "_id": "36",
+        "name": "Ceiling leakage Repair",
+        "description": "Repair and repainting of leakage area",
+        "category": "waterproofing",
+        "price": 25,
+        "image": "leak.png"
+    }]
+    },
+    "Appliance Repair":{
+        "Microwave":[{
+        "_id": "37",
+        "name": "No Heating",
+        "description": "Repair of microwave heating coil",
+        "category": "microwave",
         "price": 20,
-        "image": "saccheckup.png"
+        "image": "microwave.png"
     },{
-        "_id": "16",
+        "_id": "38",
+        "name": "Button/Display not working",
+        "description": "Repair or replacement of button/ display ",
+        "category": "microwave",
+        "price": 18,
+        "image": "microwave.png"
+    },{
+        "_id": "39",
+        "name": "Noise Issue",
+        "description": "Diagnosis and Repair of Microwave",
+        "category": "microwave",
+        "price": 15,
+        "image": "microwave.png"
+    },{
+        "_id": "40",
+        "name": "Sparking Issue",
+        "description": "Diagnosis and Repair of Electrical parts",
+        "category": "microwave",
+        "price": 15,
+        "image": "microwave.png"
+    }],
+    "Refridgerator":[{
+        "_id": "41",
+        "name": "Less Cooling in both sections",
+        "description": "Price includes visit & diagnosis",
+        "category": "fridge",
+        "price": 12,
+        "image": "fridge.png"
+    },{
+        "_id": "42",
+        "name": "Less Cooling in only refridgerator section",
+        "description": "Price includes visit & diagnosis",
+        "category": "fridge",
+        "price": 12,
+        "image": "fridge.png"
+    },{
+        "_id": "43",
         "name": "Gas refilling",
-        "description": "best in class Gas refilling by professionals",
-        "category": "split_ac",
-        "price": 45,
-        "image": "sgaschange.png"
+        "description": "Service & Gas refillng",
+        "category": "fridge",
+        "price": 25,
+        "image": "fridge.png"
 
     },{
-        "_id": "17",
-        "name": "Installation",
-        "description": "best in class AC Installation by professionals",
-        "category": "split_ac",
-        "price": 30,
-        "image": "sinstallation.png"
+        "_id": "44",
+        "name": "No Power",
+        "description": "Repair of Power issues",
+        "category": "fridge",
+        "price": 20,
+        "image": "fridge.png"
+
+    }],
+    "Washing Machine":[{
+        "_id": "45",
+        "name": "Washing machine installation",
+        "description": "Installation & demo of Washing Machine",
+        "category": "washing_machine",
+        "price": 18,
+        "image": "washinstall.png"
+    },{
+        "_id": "46",
+        "name": "No washing",
+        "description": "Price includes visit & diagnosis",
+        "category": "washing_machine",
+        "price": 12,
+        "image": "wash.png"
+    },{
+        "_id": "47",
+        "name": "No drying",
+        "description": "Price includes visit & diagnosis",
+        "category": "washing_machine",
+        "price": 12,
+        "image": "wash.png"
+
+    },{
+        "_id": "48",
+        "name": "Water Leakage",
+        "description": "Repair of water leakage",
+        "category": "washing_machine",
+        "price": 18,
+        "image": "waterleak.png"
+
+    }],
+    "Television":[{
+        "_id": "49",
+        "name": "TV repair",
+        "description": "Price includes visit & diagnosis",
+        "category": "tv",
+        "price": 10,
+        "image": "tv.png"
+    },{
+        "_id": "42",
+        "name": "Screen Replacement upto 40inch",
+        "description": "Replacement of TV screen upto 40 inch",
+        "category": "tv",
+        "price": 70,
+        "image": "tvscreen.png"
+    },{
+        "_id": "43",
+        "name": "Screen Replacement - 40 to 65 inch",
+        "description": "Replacement of TV screen  40 to 65 inch",
+        "category": "tv",
+        "price": 100,
+        "image": "tvscreen.png"
+
+    },{
+        "_id": "44",
+        "name": "TV Installation",
+        "description": "Installation of TV upto 40 inch",
+        "category": "tv",
+        "price": 20,
+        "image": "tvscreen.png"
 
     }]
 
