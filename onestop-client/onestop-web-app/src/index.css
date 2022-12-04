@@ -1,6 +1,6 @@
 body {
-  background:linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('./images/BG-Home.jpg');
-  background-size: cover;
+  background: url('./images/os-home.png');
+  background-size: 100%;
   background-repeat: no-repeat;
   font-family: 'Open Sans', sans-serif;
 }
@@ -19,6 +19,10 @@ nav{
 h1{
   font-size: xx-large;
   margin-left: 0%;
+}
+
+nav{
+  margin-bottom: 5rem;
 }
 
 nav button{
@@ -51,24 +55,34 @@ nav button{
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0.719);
   box-shadow: 0px 5px 10px black;
 }
 
 section .service-images{
-  width: 150px;
-  height: 100px;
+  width: 200px;
+  height: 150px;
   padding: 20px 10px 0px;
   border-radius: 3px;
   margin: 12px;
   font-size: 15px;
   text-align: center;
   align-items: center;
+  transition: box-shadow .5s;
+}
+
+section .service-images p{
+  text-transform: capitalize;
+  font-size: medium;
+}
+
+.service-images:hover{
+  box-shadow: 0 0 11px black; 
 }
 
 section img{
-  width: 32px;
-  height: 32px;
+  width: 50px;
+  height: 50px;
   margin: 0;
 }
 
@@ -258,4 +272,73 @@ select{
   cursor: pointer;
   background-color: transparent;
   border-color: transparent;
+}
+
+.sub{
+  display:flex;
+  gap: 2rem;
+  justify-content: center;
+  margin-top: 15rem;
+  margin-bottom: 2rem;
+}
+
+#onestop{
+  font-size: xx-large;
+  color: white;
+}
+
+.sub_card{
+  width: 700px;
+  background-color: white;
+  border-radius: 15px;
+  padding: 70px 70px;
+  text-align: center;
+  transition: box-shadow .5s;
+}
+
+.sub_card:hover{
+  box-shadow: 0 0 11px white; 
+}
+
+.sub_btn{
+  padding: 10px 20px;
+  border: 1px solid #000;
+  border-radius: 5px;
+  background: #000;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  text-align: center;
+  transition: box-shadow .5s;
+  box-shadow: 0px 0px 5px white;
+}
+
+.sub_btn:hover{
+  box-shadow: 0 0 11px black; 
+}
+
+.featured-image {
+  cursor: pointer;
+  width: 170px;
+  height: 170px;
+  border-radius: 10px;
+}
+
+.featured-product{
+  margin: 10px;
+  display: flex;
+  justify-content: space-between;
+  background-color: #fff;
+  color: #333;
+  border-radius: 15px;
+  padding: 40px 50px;
+  margin: 20px 0;
+  box-shadow: 0 0 5px black;
+}
+
+.products {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px;
 }
