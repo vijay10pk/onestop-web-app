@@ -11,7 +11,7 @@
                         "description": "Haircut as per face shape & preferance",
                         "category": "men_haircut",
                         "price": 14.99,
-                        "image": "haircut.png"
+                        "image": "men_haircut.png"
                     },{
                         "_id": "2",
                         "name": "haircolor",
@@ -25,7 +25,7 @@
                         "description": "Extensive detan process to remove dirt & tan",
                         "category": "men_haircut",
                         "price": 19.99,
-                        "image": "facial.png"
+                        "image": "men_facial.png"
                     },{
                         "_id": "4",
                         "name": "shaving",
@@ -347,7 +347,7 @@
             }
         ]
     },{
-        "category":"Appliance Repair",
+        "category":"Appliance",
         "sub_category":[
             {
                 "subCategoryName" : "Microwave",
@@ -499,7 +499,7 @@
             }
         ]
     },{
-        "category":"Plumbers & Carpenters",
+        "category":"PlumbersCarpenters",
         "sub_category":[
             {
                 "subCategoryName" : "Plumbers",
@@ -671,7 +671,7 @@
             }
         ]
     },{
-        "category":"Cleaning & Pest Control",
+        "category":"CleaningPestControl",
         "sub_category":[
             {
                 "subCategoryName" : "Bathroom & Kitchen Cleaning",
@@ -696,7 +696,7 @@
                         "description": "Dirt and stain removal from kitchen slab",
                         "category": "bathroom_cleaning",
                         "price": 24.99,
-                        "image": "bathroom.png"
+                        "image": "kitchen.png"
                     },{
                         "_id": "77",
                         "name": "Chimney Cleaning",
@@ -815,5 +815,4 @@
             }
         ]
     }
-    
 ]

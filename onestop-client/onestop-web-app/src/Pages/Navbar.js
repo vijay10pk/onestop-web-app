@@ -14,7 +14,7 @@ const Navbar = () => {
     <Fragment>
       <nav>
         <div>
-          <Link to='/' ><button id='onestop' >OneStop</button></Link>
+          <Link to='/service' ><button id='onestop' >OneStop</button></Link>
         </div>
         {localStorage.getItem('login') ? (
           <div>

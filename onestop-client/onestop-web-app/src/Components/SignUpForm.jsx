@@ -105,10 +105,10 @@ const SignUpForm = ()=> {
         if(value===""){
           message="Please Enter Your Mobile Number"
         }
-        else if(!( String(value)[0]!="0")){
+        else if(!( String(value)[0]!=="0")){
           message="Should not Start With 0"
         }
-        else if(!(value.length==10)){
+        else if(!(value.length===10)){
           message="Phone Number should be 10 digits"
         }
         else message = ""
@@ -205,4 +205,4 @@ const SignUpForm = ()=> {
   );
 }
 
-export default SignUpForm;
+export default SignUpForm;

@@ -50,4 +50,4 @@ const SubCategory = ({data,clear}) => {
       )
 }
 
-export default SubCategory
+export default SubCategory

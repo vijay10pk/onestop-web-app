@@ -27,4 +27,4 @@ const ServiceDetail = () => {
   )
 }
 
-export default ServiceDetail
+export default ServiceDetail
