@@ -1,19 +1,33 @@
 import React, { Fragment } from 'react'
-import {Link} from 'react-router-dom'
+import {Link, useNavigate} from 'react-router-dom'
 
 const Navbar = () => {
+
+  const navigate = useNavigate();
+
+  const handleLogout = () => {
+    localStorage.clear();
+    navigate('/login')
+  }
+
   return (
     <Fragment>
-          <nav>
-              <div>
-                  <Link to='/' ><button id='onestop' >OneStop</button></Link>
-              </div>
-              <div>
-                  <Link to='/about'><button>About</button></Link>
-                  <Link to='/register'><button>Register for professional</button></Link>
-                  <Link to='/login'><button>Login/Sign Up</button></Link>
-              </div>
-          </nav>
+      <nav>
+        <div>
+          <Link to='/' ><button id='onestop' >OneStop</button></Link>
+        </div>
+        {localStorage.getItem('login') ? (
+          <div>
+            <button>WELCOME  {localStorage.getItem('login').toUpperCase()}</button>
+            <button onClick={handleLogout} >LOGOUT</button>
+          </div>) : (
+          <div>
+            <Link to='/about'><button>About</button></Link>
+            <Link to='/register'><button>Register for professional</button></Link>
+            <Link to='/login'><button>Login/Sign Up</button></Link>
+          </div>
+        )}
+      </nav>
     </Fragment>
   )
 }

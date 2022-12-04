@@ -21,10 +21,6 @@ const usersSchema = Schema({
     password: {
         type: String,
         required: [true, 'Please add a password']
-    },
-    fullName: {
-        type: String,
-        required: [true, 'Please add Full Name']
     }
 }, {collection : "Users", timestamps: true });
 

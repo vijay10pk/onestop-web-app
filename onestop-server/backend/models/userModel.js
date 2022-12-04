@@ -11,10 +11,10 @@ user.generateId=()=>{
     })
 }
 
- user.loginUser = (userName,password) => {
+ user.loginUser = (email,password) => {
     return collection.getCollection().then( userColl => {
         // console.log("I'm here")
-        return userColl.findOne({"userName" : userName}).then( data => {
+        return userColl.findOne({"email" : email}).then( data => {
             if(data){
                 if( password == data['password']){
                     return data
@@ -34,7 +34,6 @@ user.RegisterUser=(registerData)=>{
                 'userName': registerData.userName,
                 'password': registerData.password,
                 'phoneNumber': registerData.phoneNumber,
-                'fullName': registerData.fullName,
                 'email': registerData.email
             }
             console.log(userObj)
