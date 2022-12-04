@@ -180,7 +180,6 @@ select{
   text-align: center;
 }
 
-/* ---------------------- */
 .form,
 .content {
   width: 70%;
@@ -252,4 +251,11 @@ select{
 
 .btn2:hover {
   transform: scale(0.98);
+}
+
+.imgBtn{
+  margin-top: 1rem;
+  cursor: pointer;
+  background-color: transparent;
+  border-color: transparent;
 }
