@@ -1,45 +1,126 @@
 import React, { useState } from "react";
 import axios from "axios";
 import { FaUser } from 'react-icons/fa'
-import Card from "./Card";
+
+const url = 'http://localhost:5000/register/'
 
 const SignUpForm = ()=> {
+
   const [formData,setFormData]=useState({
     userName:"",
-    mobileNumber: "",
+    phoneNumber: "",
     email:"",
     password: "",
     password2: ""
-
   });
-  const { userName, email, mobileNumber, password, password2 } = formData
+
+  const [errMsg,setErrmsg] = useState({
+    userName:"",
+    phoneNumber: "",
+    email:"",
+    password: "",
+    password2: ""
+  })
+
+  const [formValid,setFormvalid] = useState(false)
+  const [error,setError] = useState('')
+
   const onChange = (e) => {
+    var name = e.target.name
+    var value = e.target.value
     setFormData((prevState) => ({
       ...prevState,
-      [e.target.name]: e.target.value,
+      [name]: value,
     }))
+    validateField(name,value);
   }
 
-  const onSubmit = async (e) =>{
+  const handleClick = (e) => {
     e.preventDefault();
-    if (password !== password2) {
-      console.log("Password mismatch")
-    } else {
-      const userData = {
-        userName,
-        mobileNumber,
-        email,
-        password,
-      }
-    try{
-      const res= await axios.post("http://localhost:8000/api/users",userData);
-      alert(res.data.message);
-    //   navigate("/login")
-    }catch(error){
-      alert(error.response.data.message);
+    let userData = {
+        userName : formData.userName,
+        email: formData.email,
+        password: formData.password,
+        password2: formData.password2,
+        phoneNumber: formData.phoneNumber
     }
+    axios.post(url,userData)
+    .then(response => {
+        localStorage.setItem("login",response.data[0].fullName);
+        localStorage.setItem("msg","You are logged in")
+        // closeClick();
+    }).catch(error => {
+      if (error.response) {
+        console.log(error.response.data)
+        setError(error.response.data)
+        setTimeout(() => {
+          setError('')
+        }, 4000);
+      } else {
+        setError(error.data)
+        setTimeout(() => {
+          setError('')
+        }, 4000);
+      }
+    })
+    setFormData({
+      userName:"",
+      phoneNumber: "",
+      email:"",
+      password: "",
+      password2: ""
+    })
   }
-}
+
+  const validateField = (fieldName, value) => {
+    var message;
+
+    switch (fieldName) {
+      case 'email':
+        let emailRegex = new RegExp(/^[A-z][A-z0-9.]+@[a-z]+\.[a-z]{2,3}$/);
+        value === "" ? message = "Please enter your email id" : emailRegex.test(value) ? message = "" : message = "Email id format is wrong"
+        break;
+
+      case "password":
+        let passRegex = new RegExp(/^(?=.*[A-Z])(?=.*[!@#$&*%&])(?=.*[0-9])(?=.*[a-z]).{7,20}$/);
+        value === "" ? message = "Please enter your password" : passRegex.test(value) ? message = "" : message = "Invalid password"
+        break
+      
+      case "password2":
+        let pass2Regex = new RegExp(/^(?=.*[A-Z])(?=.*[!@#$&*%&])(?=.*[0-9])(?=.*[a-z]).{7,20}$/);
+        value === "" ? message = "Please enter your password" : !pass2Regex.test(value) ? message = "Invalid password" : value===formData.password ? message='' : message = "Password mismatch"
+        break
+    
+      case "userName":
+        if(value===""){
+          message="Please enter your Name"
+        }
+        else if(!(value.match(/^[a-zA-z]+([\s][a-zA-Z]+)*$/))){
+          message="Only alphabets. Should not start and end with space"
+        }
+        else message = ""
+        break
+
+      case "phoneNumber":
+        if(value===""){
+          message="Please Enter Your Mobile Number"
+        }
+        else if(!( String(value)[0]!="0")){
+          message="Should not Start With 0"
+        }
+        else if(!(value.length==10)){
+          message="Phone Number should be 10 digits"
+        }
+        else message = ""
+        break
+
+      default:
+        break;
+    }
+    setErrmsg({...errMsg,[fieldName]:message})
+    //Form Valid set
+    message === "" ? setFormvalid(true):setFormvalid(false)
+  }
 
   return (
     <>
@@ -51,17 +132,18 @@ const SignUpForm = ()=> {
       </section>
 
        <section className='form'>
-        <form onSubmit={onSubmit}>
+        <form onSubmit={handleClick}>
           <div className='form-group'>
             <input
               type='text'
               className='form-control'
               id='userName'
               name='userName'
-              value={userName}
+              value={formData.userName}
               placeholder='Enter your name'
               onChange={onChange}
             />
+            <span className="text-danger">{errMsg.userName}</span>
           </div>
           <div className='form-group'>
             <input
@@ -69,21 +151,23 @@ const SignUpForm = ()=> {
               className='form-control'
               id='email'
               name='email'
-              value={email}
+              value={formData.email}
               placeholder='Enter your email'
               onChange={onChange}
             />
+            <span className="text-danger">{errMsg.email}</span>
           </div>
           <div className='form-group'>
             <input
-              type='mobileNumber'
+              type='phoneNumber'
               className='form-control'
-              id='mobileNumber'
-              name='mobileNumber'
-              value={mobileNumber}
-              placeholder='Enter your mobile number'
+              id='phoneNumber'
+              name='phoneNumber'
+              value={formData.phoneNumber}
+              placeholder='Enter your phone number'
               onChange={onChange}
             />
+            <span className="text-danger">{errMsg.phoneNumber}</span>
           </div>
           <div className='form-group'>
             <input
@@ -91,10 +175,11 @@ const SignUpForm = ()=> {
               className='form-control'
               id='password'
               name='password'
-              value={password}
+              value={formData.password}
               placeholder='Enter password'
               onChange={onChange}
             />
+            <span className="text-danger">{errMsg.password}</span>
           </div>
           <div className='form-group'>
             <input
@@ -102,16 +187,18 @@ const SignUpForm = ()=> {
               className='form-control'
               id='password2'
               name='password2'
-              value={password2}
+              value={formData.password2}
               placeholder='Confirm password'
               onChange={onChange}
             />
+            <span className="text-danger">{errMsg.password2}</span>
           </div>
           <div className='form-group'>
-            <button type='submit' className='btn2 btn2-block'>
+            <button disabled={!formValid} type='submit' className='btn2 btn2-block'>
               Submit
             </button>
           </div>
+          <span className="text-danger">{error}</span>
         </form>
       </section>
     </>

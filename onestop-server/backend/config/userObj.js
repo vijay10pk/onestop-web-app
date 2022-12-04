@@ -3,8 +3,7 @@ class userObj{
         this.userName = obj.userName,
         this.password = obj.password,
         this.phoneNumber = obj.phoneNumber,
-        this.email = obj.email,
-        this.fullName = obj.fullName
+        this.email = obj.email
     }
 }
 
