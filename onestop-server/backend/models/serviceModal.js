@@ -6,7 +6,6 @@ service.setupDB = () => {
     return collection.getProductCollection().then( prodColl => {
         return prodColl.deleteMany().then( () => {
             return prodColl.insertMany(serviceDatabase).then((data) => {
-                console.log(data)
                 if (data) return data
                 else return null
             });
@@ -62,4 +61,4 @@ service.getSearch=(search)=>{
     })
 }
 
-module.exports = service
+module.exports = service
