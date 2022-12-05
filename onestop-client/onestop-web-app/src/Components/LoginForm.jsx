@@ -66,7 +66,7 @@ const LoginForm = () => {
 
       case "password":
         let passRegex = new RegExp(/^(?=.*[A-Z])(?=.*[!@#$&*%&])(?=.*[0-9])(?=.*[a-z]).{7,20}$/);
-        value === "" ? message = "Please enter your password" : passRegex.test(value) ? message = "" : message = "Please enter a valid password"
+        value === "" ? message = "Please enter your password" : passRegex.test(value) ? message = "" : message = "Please enter a valid password. Include atleast one uppercase, one special character[!@#$*%&] and one number "
         break
 
       default:

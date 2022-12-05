@@ -54,4 +54,33 @@ user.RegisterUser=(registerData)=>{
     })
 }
 
+user.ProfessionalUser=(registerData)=>{
+    return collection.getProfessionalCollection().then(model=>{
+            let userObj = {
+                'userName': registerData.userName,
+                'password': registerData.password,
+                'phoneNumber': registerData.phoneNumber,
+                'email': registerData.email,
+                'address': registerData.address,
+                'service': registerData.service
+            }
+            return model.findOne({"email" : registerData.email}).then( data => {
+                if(!data){
+                    // console.log("i'm here")
+                    return model.insertMany([userObj]).then(data=>{
+                        // console.log("i'm here")
+                        if(data.length!=0){
+                            return data
+                        }
+                        else{
+                            throw new Error("Registration failed | Try again")
+                        }
+                    })
+                }
+                else throw new Error("Your emailID is already registered, Please login"); 
+            })
+    })
+}
+
+
 module.exports = user
