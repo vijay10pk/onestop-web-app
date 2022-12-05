@@ -74,12 +74,16 @@ const Cart = () => {
                 <Card >
                     <h3 style={{ display: "flex", justifyContent: "space-between" }}><span>Total:</span>  <i>${totalAmount?totalAmount.toFixed(2):0}</i></h3>
                     <h5 style={{ display: "flex", justifyContent: "space-between" }}><span>Services:</span>  <span>{itemCount ? itemCount:0}</span></h5>
-                    <div className='checkout' >
-                        <button className='btn2'>Proceed To Checkout</button>
-                    </div>
-                    <div className='checkout'>
-                        <button onClick={clearCart} className='btn_checkout'>Clear Cart</button>
-                    </div>
+                    {itemCount> 0 && (
+                        <>
+                            <div className='checkout' >
+                                <button className='btn2'>Proceed To Checkout</button>
+                            </div>
+                            <div className='checkout'>
+                                <button onClick={clearCart} className='btn_checkout'>Clear Cart</button>
+                            </div>
+                        </>
+                    )}
                 </Card>
             </div>
         </div>
