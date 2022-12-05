@@ -2,11 +2,11 @@
   "name": "onestop",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "onestop-server/backend/index.js",
   "scripts": {
-    "start": "node backend/server.js",
-    "server": "nodemon backend/server.js",
-    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix onestop-client && npm run build --prefix onestop-client"
+    "start": "node onestop-server/backend/server.js",
+    "server": "nodemon onestop-server/backend/server.js",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix onestop-client/onestop-web-app && npm run build --prefix onestop-client/onestop-web-app"
   },
   "author": "",
   "license": "MIT",
