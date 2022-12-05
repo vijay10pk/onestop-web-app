@@ -4,7 +4,7 @@ import { FaUser } from 'react-icons/fa'
 import Card from '../Components/Card';
 import { Link, useNavigate } from 'react-router-dom';
 
-const url = 'http://localhost:5000/profregister/'
+const url = 'http://13.58.197.46/profregister/'
 
 const Register = () => {
 
