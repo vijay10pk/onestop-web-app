@@ -4,10 +4,17 @@ import { CartContext } from '../Context/CardContext';
 import {FaPlusCircle, FaTrash, FaMinusCircle} from 'react-icons/fa';
 import {BsFillCartXFill} from 'react-icons/bs'
 import Card from './Card'
+import Checkout from './Checkout'
+import { useNavigate } from 'react-router-dom';
 
 const Cart = () => {
     const {cartItems, totalAmount, itemCount, addMore, decrease, remove, clearCart} = useContext(CartContext)
-    
+    const navigate = useNavigate();
+
+    const checkOut = () => {
+        navigate('/checkout')
+    }
+
     return (
         <div className="row d-flex align-items-center">
             <div className="col-8">
@@ -77,7 +84,7 @@ const Cart = () => {
                     {itemCount> 0 && (
                         <>
                             <div className='checkout' >
-                                <button className='btn2'>Proceed To Checkout</button>
+                                <button onClick={checkOut} className='btn2'>Proceed To Checkout</button>
                             </div>
                             <div className='checkout'>
                                 <button onClick={clearCart} className='btn_checkout'>Clear Cart</button>
