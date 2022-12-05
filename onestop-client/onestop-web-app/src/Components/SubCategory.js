@@ -1,7 +1,6 @@
 import React, { Fragment } from 'react'
-import { useState,useContext } from 'react';
+import { useContext } from 'react';
 import {useNavigate} from 'react-router-dom'
-import ServiceDetail from './ServiceDetail';
 import { ServicesContext } from '../Context/ServiceContext';
 import ServiceList from './ServiceList';
 
