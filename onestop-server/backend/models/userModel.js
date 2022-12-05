@@ -36,9 +36,7 @@ user.RegisterUser=(registerData)=>{
                 'phoneNumber': registerData.phoneNumber,
                 'email': registerData.email
             }
-            console.log(userObj)
             return model.findOne({"email" : registerData.email}).then( data => {
-                console.log(data)
                 if(!data){
                     // console.log("i'm here")
                     return model.insertMany([userObj]).then(data=>{
@@ -51,7 +49,7 @@ user.RegisterUser=(registerData)=>{
                         }
                     })
                 }
-                else throw new Error("You are already Registered Please login"); 
+                else throw new Error("Your emailID is already registered, Please login"); 
             })
     })
 }

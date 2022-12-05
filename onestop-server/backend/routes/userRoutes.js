@@ -15,9 +15,7 @@ router.post('/login', (req,res,next)=>{
 });
 
 router.post('/register', (req,res,next)=>{
-    
     const registerData=new userObj(req.body);
-    console.log(registerData)
     return userModel.RegisterUser(registerData).then(userData => {
         res.json(userData);
     }).catch(err => {

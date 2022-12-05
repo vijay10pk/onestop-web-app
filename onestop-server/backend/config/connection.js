@@ -14,7 +14,7 @@ const usersSchema = Schema({
         unique: true
     },
     phoneNumber: {
-        type: Number,
+        type: String,
         required: [true, 'Please add a mobile number'],
         unique: true
     },

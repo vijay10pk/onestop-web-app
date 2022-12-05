@@ -424,6 +424,16 @@ select{
   margin: 0 auto;
   padding: 0px ;
 }
-.name-price{
+/* .name-price{
+  text-align: right;
+} */
+
+#total{
+  position: fixed;
+  top: 160px;
+  right: 4rem;
+}
+
+#right-align{
   text-align: right;
 }

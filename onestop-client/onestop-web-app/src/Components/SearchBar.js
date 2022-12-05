@@ -6,14 +6,13 @@ import { ServicesContext } from '../Context/ServiceContext';
 import { useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
 
-const searchUrl = 'http://localhost:5000/search/'
+const searchUrl = 'http://13.58.197.46/search/'
 
 const SearchBar = () => {
 
     const [search,setSearch] = useState('');
     const {services,addServices} = useContext(ServicesContext)
     const navigate = useNavigate();
-    console.log(services)
 
     const handleSearch = (e) => {
         e.preventDefault();
