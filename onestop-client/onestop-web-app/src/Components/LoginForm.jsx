@@ -123,7 +123,7 @@ const LoginForm = () => {
           </form>
           <span className="text-danger">{error}</span>
         </section>
-        </>
+    </>
   );
 };
 

@@ -169,6 +169,11 @@ select{
 /* ---------------------------- */
 
 .container {
+  margin: auto;
+  padding: 0 20px;
+}
+
+.authentication-container {
   max-width: 800px;
   margin: auto;
   padding: 0 20px;
@@ -341,4 +346,63 @@ select{
   display: flex;
   justify-content: space-between;
   padding: 5px;
+}
+
+.btn3 {
+  padding: 10px 20px;
+  border: 1px solid #000;
+  border-radius: 5px;
+  background: white;
+  color: black;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  text-align: center;
+  appearance: button;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.detail{
+  width: 100%;
+  display: flex;
+  gap: 3rem;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.list{
+  width: 80%;
+}
+
+.btns-container {
+  display: flex;
+  justify-content: right;
+}
+
+.btns-container button{
+  margin-left: 3rem;
+}
+
+.checkout{
+  margin: auto;
+  margin-top: 2rem;
+}
+
+.btn_checkout{
+  border-radius: 5px;
+  color: red;
+  background-color: transparent;
+  border-color: red;
+  font-size: x-large;
+}
+
+.empty-cart-icon{
+  font-size: 230px;
+}
+
+.empty-container{
+  margin: 0 auto;
+  padding: 0px ;
 }

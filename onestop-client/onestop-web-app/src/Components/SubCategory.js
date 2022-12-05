@@ -22,13 +22,14 @@ const SubCategory = ({data,clear}) => {
     if(services!==""){
         return (
             <ServicesContext.Provider value={{ services }}>
-              <ServiceDetail></ServiceDetail>
+                <ServiceDetail></ServiceDetail>
             </ServicesContext.Provider>
           );
     }
  
     return (
         <Fragment>
+            <div className="authentication-container">
             <div style={ {textAlign: "center" } } >
                 <div className='sub'>
                     {data.map((sub,index) => {
@@ -46,8 +47,9 @@ const SubCategory = ({data,clear}) => {
                 </div>
                 <button className='sub_btn' onClick={backClick}>GO BACK</button>
             </div>
+            </div>
         </Fragment>
       )
 }
 
-export default SubCategory
+export default SubCategory

@@ -6,7 +6,9 @@ import Login from './Pages/Login'
 import Register from './Pages/Register'
 import Navbar from './Pages/Navbar'
 import ServiceList from './Components/ServiceList'
-
+import SubCategory from './Components/SubCategory'
+import ServiceDetail from './Components/ServiceDetail'
+import Cart from './Components/Cart'
 
 const App = () => {
   return (
@@ -19,6 +21,8 @@ const App = () => {
           <Route path='/register' element={<Register/>} />
           <Route path='/about' element={<About />} />
           <Route path='/service' element={<ServiceList />}></Route>
+          <Route path='/detail' element={<ServiceDetail />}></Route>
+          <Route path='cart' element={<Cart />} />
         </Routes>
       </div>  
     </Router>
