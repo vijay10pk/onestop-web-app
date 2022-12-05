@@ -9,6 +9,7 @@ import ServiceList from './Components/ServiceList'
 import SubCategory from './Components/SubCategory'
 import ServiceDetail from './Components/ServiceDetail'
 import Cart from './Components/Cart'
+import SearchBar from './Components/SearchBar'
 
 const App = () => {
   return (
@@ -22,6 +23,8 @@ const App = () => {
           <Route path='/about' element={<About />} />
           <Route path='/service' element={<ServiceList />}></Route>
           <Route path='/detail' element={<ServiceDetail />}></Route>
+          <Route path='/search' element={<SearchBar/>} />
+          <Route path='/sub' element={<SubCategory />} ></Route>
           <Route path='cart' element={<Cart />} />
         </Routes>
       </div>  

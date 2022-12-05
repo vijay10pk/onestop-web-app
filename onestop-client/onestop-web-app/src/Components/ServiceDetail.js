@@ -1,7 +1,7 @@
 import React from 'react'
 import { useContext } from 'react'
 import { useNavigate } from 'react-router-dom'
-import { ServicesContext } from './SubCategory'
+import { ServicesContext } from '../Context/ServiceContext'
 import {CartContext} from '../Context/CardContext'
 import { cartCheck, quantityCheck } from './shared/cartCheck'
 
@@ -9,11 +9,12 @@ const ServiceDetail = () => {
 
     const {services} = useContext(ServicesContext)
     const {addToCart,cartItems,addMore} = useContext(CartContext)
+    console.log(services)
     
     const navigate = useNavigate();
 
     const backClick = () => {
-        navigate('/service',{replace:true})
+        navigate('/sub',{replace:true})
     }
 
     const goCart = () => {

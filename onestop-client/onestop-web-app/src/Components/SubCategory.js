@@ -1,30 +1,29 @@
 import React, { Fragment } from 'react'
-import { useState,createContext } from 'react';
+import { useState,useContext } from 'react';
 import {useNavigate} from 'react-router-dom'
 import ServiceDetail from './ServiceDetail';
+import { ServicesContext } from '../Context/ServiceContext';
+import ServiceList from './ServiceList';
 
-export const ServicesContext = createContext();
-
-const SubCategory = ({data,clear}) => {
+const SubCategory = () => {
 
     const navigate = useNavigate()
-    const [services,setServices] = useState('')
+    // const [services,setServices] = useState('')
+    const {data,addServices,delData} = useContext(ServicesContext)
 
-    const handleClick = (dataService) => {
-        setServices(dataService)
+    const handleClick = (service) => {
+        addServices(service)
+        navigate('/detail', {replace: true})
     }
 
     const backClick = () => {
-        clear()
+        localStorage.removeItem('data')
+        delData();
         navigate('/service', {replace: true})
     }
 
-    if(services!==""){
-        return (
-            <ServicesContext.Provider value={{ services }}>
-                <ServiceDetail></ServiceDetail>
-            </ServicesContext.Provider>
-          );
+    if(!data){
+        return <ServiceList></ServiceList>
     }
  
     return (
@@ -35,10 +34,7 @@ const SubCategory = ({data,clear}) => {
                     {data.map((sub,index) => {
                         return (
                             <>
-                                <div key={index} onClick={()=>{
-                                    let data = sub.services
-                                    handleClick(data)
-                                }} className='sub_card' >
+                                <div key={index} onClick={()=> handleClick(sub.services)} className='sub_card' >
                                    <h2 style={{ textTransform: "capitalize" }} >{sub.subCategoryName}</h2>
                                 </div>
                             </>

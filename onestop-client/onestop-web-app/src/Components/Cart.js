@@ -21,11 +21,11 @@ const Cart = () => {
                             </div>
                             <div className="name-price">
                             <div>
-                                <h4>{item.name}</h4>
-                                <p>{`Price: ${item.price}`}</p>
+                                <h4 style={{ textTransform: "capitalize" }} >{item.name}</h4>
+                                <h5>{`Price: ${item.price}`}</h5>
                             </div>
                             <div>
-                                <p>{`Quantity: ${item.quantity}`}</p>
+                                <h6>{`Quantity: ${item.quantity}`}</h6>
                             </div>
                             <div className='btns-container'>
                                 <button
