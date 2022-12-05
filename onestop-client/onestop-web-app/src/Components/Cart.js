@@ -7,7 +7,7 @@ import Card from './Card'
 
 const Cart = () => {
     const {cartItems, totalAmount, itemCount, addMore, decrease, remove, clearCart} = useContext(CartContext)
-    console.log(cartItems,totalAmount,itemCount)
+    
     return (
         <div className="row d-flex align-items-center">
             <div className="col-8">

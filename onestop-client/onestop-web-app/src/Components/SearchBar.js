@@ -1,7 +1,6 @@
 import React from 'react'
 import { useState } from 'react';
 import axios from 'axios';
-import ServiceDetail from './ServiceDetail';
 import { ServicesContext } from '../Context/ServiceContext';
 import { useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
@@ -11,7 +10,7 @@ const searchUrl = 'http://13.58.197.46/search/'
 const SearchBar = () => {
 
     const [search,setSearch] = useState('');
-    const {services,addServices} = useContext(ServicesContext)
+    const {addServices} = useContext(ServicesContext)
     const navigate = useNavigate();
 
     const handleSearch = (e) => {
