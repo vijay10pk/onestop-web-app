@@ -8,59 +8,41 @@ import electrical from "../images/electrical.png";
 import spa from "../images/spa.png";
 import paint from "../images/paint.png";
 import axios from "axios";
-import { useState, createContext } from "react";
+import { useState } from "react";
 import SubCategory from "./SubCategory";
-import { Link } from "react-router-dom";
-
+import { Link, useNavigate } from "react-router-dom";
+import { useEffect } from "react";
+import { useContext } from "react";
+import { ServicesContext } from "../Context/ServiceContext";
+import SearchBar from "./SearchBar";
 
 const url = 'http://localhost:5000/category/'
-const searchUrl = 'http://localhost:5000/search/'
 
 function ServiceList() {
 
-  const [data,setData] = useState('');
-  const [search,setSearch] = useState('');
-
-  const clear =()=>{
-    setData('')
-  }
-
-  const handleSearch = (e) => {
-    setSearch(e.target.value)
-    axios.get(url+'ac')
-    .then(response => {
-      console.log(response)
-    }).catch(error => {
-      console.log(error.response)
-    })
-  }
+  const {data,addData,delData} = useContext(ServicesContext)
 
   const handleClick = (value) => {
-    setData('')
     axios.get(url+value)
     .then(response => {
-      setData(response.data[0].sub_category)
+      addData(response.data[0].sub_category)
     }).catch(error => {
       console.log(error.response.data)
     })
   }
 
-  if(data!==''){
-    return <SubCategory data={data} clear={clear}></SubCategory>
-  }else{
+ useEffect(()=>{
+    delData()
+ },[])
+
+ if(data){
+    return <SubCategory></SubCategory>
+  }
     return (
       <>
         <div className="authentication-container">
           <div className="bgimg">
-            <div>
-              <input
-                className="searchService"
-                type="search"
-                value={search}
-                onChange={handleSearch}
-                placeholder="Search for services"
-              ></input>
-            </div>
+            <SearchBar></SearchBar>
             <section id="homepage">
               <div className="service-images">
                 <button onClick={()=> handleClick("AC")} name="AC" className="imgBtn">
@@ -116,6 +98,6 @@ function ServiceList() {
       </>
     );
   }
-  }
+  
 
 export default ServiceList;
