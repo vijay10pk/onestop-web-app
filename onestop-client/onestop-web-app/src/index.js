@@ -4,14 +4,15 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import ServicesContextProvider from './Context/ServiceContext';
+import CartContextProvider from './Context/CardContext';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
     <ServicesContextProvider>
-      <App />
+      <CartContextProvider>
+        <App />
+      </CartContextProvider>
     </ServicesContextProvider>
-  </React.StrictMode>
 );
 
 // If you want to start measuring performance in your app, pass a function

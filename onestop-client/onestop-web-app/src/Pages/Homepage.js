@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react'
 import ServiceList from '../Components/ServiceList'
 
-const App = () => {
+const Homepage = () => {
 
   return (
     <Fragment>
@@ -10,4 +10,4 @@ const App = () => {
   )
 }
 
-export default App
+export default Homepage
