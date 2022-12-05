@@ -16,7 +16,7 @@ import { useContext } from "react";
 import { ServicesContext } from "../Context/ServiceContext";
 import SearchBar from "./SearchBar";
 
-const url = 'http://localhost:5000/category/'
+const url = 'http://13.58.197.46/category/'
 
 function ServiceList() {
 

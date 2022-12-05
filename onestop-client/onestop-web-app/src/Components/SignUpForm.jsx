@@ -1,10 +1,13 @@
 import React, { useState } from "react";
 import axios from "axios";
 import { FaUser } from 'react-icons/fa'
+import { Navigate, useNavigate } from "react-router-dom";
 
-const url = 'http://localhost:5000/register/'
+const url = 'http://13.58.197.46/register/'
 
 const SignUpForm = ()=> {
+
+  const navigate = useNavigate()
 
   const [formData,setFormData]=useState({
     userName:"",
@@ -46,12 +49,10 @@ const SignUpForm = ()=> {
     }
     axios.post(url,userData)
     .then(response => {
-        localStorage.setItem("login",response.data[0].fullName);
-        localStorage.setItem("msg","You are logged in")
-        // closeClick();
+      localStorage.setItem("login",response.data[0].userName);
+      navigate('/',{replace:true})
     }).catch(error => {
       if (error.response) {
-        console.log(error.response.data)
         setError(error.response.data)
         setTimeout(() => {
           setError('')
@@ -78,17 +79,17 @@ const SignUpForm = ()=> {
     switch (fieldName) {
       case 'email':
         let emailRegex = new RegExp(/^[A-z][A-z0-9.]+@[a-z]+\.[a-z]{2,3}$/);
-        value === "" ? message = "Please enter your email id" : emailRegex.test(value) ? message = "" : message = "Email id format is wrong"
+        value === "" ? message = "Please enter your email id" : emailRegex.test(value) ? message = "" : message = "Please enter a valid email ID"
         break;
 
       case "password":
         let passRegex = new RegExp(/^(?=.*[A-Z])(?=.*[!@#$&*%&])(?=.*[0-9])(?=.*[a-z]).{7,20}$/);
-        value === "" ? message = "Please enter your password" : passRegex.test(value) ? message = "" : message = "Invalid password"
+        value === "" ? message = "Please enter your password" : passRegex.test(value) ? message = "" : message = "Please enter a valid password"
         break
       
       case "password2":
         let pass2Regex = new RegExp(/^(?=.*[A-Z])(?=.*[!@#$&*%&])(?=.*[0-9])(?=.*[a-z]).{7,20}$/);
-        value === "" ? message = "Please enter your password" : !pass2Regex.test(value) ? message = "Invalid password" : value===formData.password ? message='' : message = "Password mismatch"
+        value === "" ? message = "Please enter your password" : !pass2Regex.test(value) ? message = "Please enter a valid password" : value===formData.password ? message='' : message = "Password mismatch"
         break
     
       case "userName":
@@ -103,7 +104,7 @@ const SignUpForm = ()=> {
 
       case "phoneNumber":
         if(value===""){
-          message="Please Enter Your Mobile Number"
+          message="Please enter your Phone Number"
         }
         else if(!( String(value)[0]!=="0")){
           message="Should not Start With 0"
@@ -159,7 +160,7 @@ const SignUpForm = ()=> {
           </div>
           <div className='form-group'>
             <input
-              type='phoneNumber'
+              type='text'
               className='form-control'
               id='phoneNumber'
               name='phoneNumber'

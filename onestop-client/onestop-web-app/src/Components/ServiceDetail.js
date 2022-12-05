@@ -49,7 +49,7 @@ const ServiceDetail = () => {
               })}
           </div>
         <div>
-            <button className='sub_btn' onClick={goCart}>GO To Cart</button>
+            <button className='sub_btn' onClick={goCart}>Go To Cart</button>
         </div>
     </div>
   )

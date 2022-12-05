@@ -19,7 +19,7 @@ const Cart = () => {
                             <div>
                                 <img  className='featured-image' src={require(`../images/${item.image}`)} alt='product' />
                             </div>
-                            <div className="name-price">
+                            <div id='right-align' className="name-price">
                             <div>
                                 <h4 style={{ textTransform: "capitalize" }} >{item.name}</h4>
                                 <h5>{`Price: ${item.price}`}</h5>
@@ -61,7 +61,6 @@ const Cart = () => {
                     </>
                 ) : ( 
                     <>
-                        {console.log("i'm here")}
                         <div className='featured-product'>
                             <div className='empty-container'>
                                 <BsFillCartXFill className='empty-cart-icon' ></BsFillCartXFill>
@@ -71,7 +70,7 @@ const Cart = () => {
                     </>
                 )}
             </div>
-            <div className="col-4">
+            <div id='total' className="col-4">
                 <Card >
                     <h3 style={{ display: "flex", justifyContent: "space-between" }}><span>Total:</span>  <i>${totalAmount?totalAmount.toFixed(2):0}</i></h3>
                     <h5 style={{ display: "flex", justifyContent: "space-between" }}><span>Services:</span>  <span>{itemCount ? itemCount:0}</span></h5>

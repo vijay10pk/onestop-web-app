@@ -3,7 +3,7 @@ import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import { FaSignInAlt } from 'react-icons/fa'
 
-const url = 'http://localhost:5000/login/'
+const url = 'http://13.58.197.46/login/'
 
 const LoginForm = () => {
   const navigate = useNavigate();
@@ -37,9 +37,7 @@ const LoginForm = () => {
     e.preventDefault();
     axios.post(url, { email: formData.email, password: formData.password })
       .then(response => {
-        console.log(response.data)
         localStorage.setItem("login", response.data.userName);
-        localStorage.setItem("msg", "You are logged in")
         navigate('/');
       }).catch(error => {
         if (error.response) {
