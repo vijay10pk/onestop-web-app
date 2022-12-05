@@ -6,7 +6,7 @@ const bodyParser = require('body-parser');
 const userRoutes = require('./routes/userRoutes')
 const serviceRoutes = require('./routes/serviceRoutes')
 const app = express();
-const appPort = 8000
+const appPort = 5000
 const NODE_ENV = "production"
 
 app.use(cors());
