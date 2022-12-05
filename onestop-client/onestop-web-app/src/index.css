@@ -452,3 +452,12 @@ select{
 #right-align{
   text-align: right;
 }
+
+.checkout-page{
+  text-align: center;
+  color: white;
+}
+.checkout-page h1{
+  font-size: 4rem;
+  margin-bottom: 3rem;
+}
