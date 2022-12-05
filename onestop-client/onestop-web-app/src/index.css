@@ -175,11 +175,26 @@ select{
 }
 
 .about{
-  background-color: grey;
+  background-color: rgba(128, 128, 128, 0.596);
   margin: -10px;
   padding: 5px;
   text-align: center;
+  border-radius: 10px;
+  color: white;
 }
+
+.about p{
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  padding: 15px;
+  font-size: 1.5rem;
+  color: white;
+}
+
+.about-head h1{
+  font-size: 5rem;
+  color: white;
+}
+
 .titles{
   padding: 20px;
   text-align: center;
