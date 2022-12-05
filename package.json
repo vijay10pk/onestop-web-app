@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node onestop-server/backend/server.js",
     "server": "nodemon onestop-server/backend/server.js",
-    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix onestop-client/onestop-web-app && npm run build --prefix onestop-client/onestop-web-app"
+    "heroku-postbuild": "cd ./onestop-client/onestop-web-app && npm install && npm run build"
   },
   "author": "",
   "license": "MIT",
