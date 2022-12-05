@@ -12,7 +12,16 @@ const Cart = () => {
     const navigate = useNavigate();
 
     const checkOut = () => {
-        navigate('/checkout')
+        if(localStorage.getItem('login')){
+            navigate('/checkout')
+            clearCart();
+            
+
+        }else{
+            alert('Please login to continue');
+            navigate('/login')
+        }
+        
     }
 
     return (

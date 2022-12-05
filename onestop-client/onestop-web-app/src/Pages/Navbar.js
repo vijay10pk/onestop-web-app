@@ -24,6 +24,7 @@ const Navbar = () => {
             <button onClick={handleLogout} >LOGOUT</button>
           </div>) : (
           <div>
+            <Link to='/cart' ><button><FaShoppingCart style={{ fontSize: "25px" }} ></FaShoppingCart></button></Link>
             <Link to='/about'><button>About</button></Link>
             <Link to='/register'><button>Register for professional</button></Link>
             <Link to='/login'><button>Login/Sign Up</button></Link>

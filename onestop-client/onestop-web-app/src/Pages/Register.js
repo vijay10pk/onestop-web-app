@@ -2,9 +2,13 @@ import React, { useState } from 'react'
 import axios from "axios";
 import { FaUser } from 'react-icons/fa'
 import Card from '../Components/Card';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+
+const url = 'http://localhost:5000/profregister/'
 
 const Register = () => {
+
+    const navigate = useNavigate();
     const [formData,setFormData]=useState({
         userName:"",
         mobileNumber: "",
@@ -15,35 +19,124 @@ const Register = () => {
         serviceOffered: "",
     
       });
-      const { userName, email, mobileNumber, password, password2, address, serviceOffered } = formData
+
+      const [errMsg,setErrmsg] = useState({
+        userName:"",
+        phoneNumber: "",
+        email:"",
+        password: "",
+        password2: "",
+        address: "",
+        serviceOffered: "",
+      })
+    
+      const [formValid,setFormvalid] = useState(false)
+      const [error,setError] = useState('')
+      // const { userName, email, mobileNumber, password, password2, address, serviceOffered } = formData
+
       const onChange = (e) => {
+        var name = e.target.name
+        var value = e.target.value
         setFormData((prevState) => ({
           ...prevState,
-          [e.target.name]: e.target.value,
+          [name]: value,
         }))
+        validateField(name,value);
       }
     
-      const onSubmit = async (e) =>{
+      const handleClick = (e) => {
         e.preventDefault();
-        if (password !== password2) {
-          console.log("Password mismatch")
-        } else {
-          const userData = {
-            userName,
-            mobileNumber,
-            email,
-            password,
-            address,
-            serviceOffered
-          }
-        try{
-          const res= await axios.post("http://localhost:8000/api/users",userData);
-          alert(res.data.message);
-        //   navigate("/login")
-        }catch(error){
-          alert(error.response.data.message);
+        let userData = {
+            userName : formData.userName,
+            email: formData.email,
+            password: formData.password,
+            address: formData.address,
+            phoneNumber: formData.phoneNumber,
+            serviceOffered: formData.serviceOffered
         }
+        axios.post(url,userData)
+        .then(response => {
+          navigate('/success',{replace:true})
+        }).catch(error => {
+          if (error.response) {
+            setError(error.response.data)
+            setTimeout(() => {
+              setError('')
+            }, 4000);
+          } else {
+            setError(error.data)
+            setTimeout(() => {
+              setError('')
+            }, 4000);
+          }
+        })
+        setFormData({
+          userName:"",
+          phoneNumber: "",
+          email:"",
+          password: "",
+          password2: "",
+          address: '',
+          serviceOffered: ''
+        })
       }
+
+    const validateField = (fieldName, value) => {
+      var message;
+  
+      switch (fieldName) {
+        case 'email':
+          let emailRegex = new RegExp(/^[A-z][A-z0-9.]+@[a-z]+\.[a-z]{2,3}$/);
+          value === "" ? message = "Please enter your email id" : emailRegex.test(value) ? message = "" : message = "Please enter a valid email ID"
+          break;
+  
+        case "password":
+          let passRegex = new RegExp(/^(?=.*[A-Z])(?=.*[!@#$&*%&])(?=.*[0-9])(?=.*[a-z]).{7,20}$/);
+          value === "" ? message = "Please enter your password" : passRegex.test(value) ? message = "" : message = "Please enter a valid password. Include atleast one uppercase, one special character[!@#$*%&] and one number"
+          break
+        
+        case "password2":
+          let pass2Regex = new RegExp(/^(?=.*[A-Z])(?=.*[!@#$&*%&])(?=.*[0-9])(?=.*[a-z]).{7,20}$/);
+          value === "" ? message = "Please enter your password" : !pass2Regex.test(value) ? message = "Please enter a valid password. Include atleast one uppercase, one special character[!@#$*%&] and one number" : value===formData.password ? message='' : message = "Password mismatch"
+          break
+      
+        case "userName":
+          if(value===""){
+            message="Please enter your Name"
+          }
+          else if(!(value.match(/^[a-zA-z]+([\s][a-zA-Z]+)*$/))){
+            message="Only alphabets. Should not start and end with space"
+          }
+          else message = ""
+          break
+  
+        case "phoneNumber":
+          if(value===""){
+            message="Please enter your Phone Number"
+          }
+          else if(!( String(value)[0]!=="0")){
+            message="Should not Start With 0"
+          }
+          else if(!(value.length===10)){
+            message="Phone Number should be 10 digits"
+          }
+          else message = ""
+          break
+        case "serviceOffered":
+          case "userName":
+          if(value===""){
+            message="Please enter a service"
+          }else{
+            message = ""
+            break
+          } 
+  
+        default:
+          break;
+      }
+      setErrmsg({...errMsg,[fieldName]:message})
+      //Form Valid set
+      message === "" ? setFormvalid(true):setFormvalid(false)
     }
 
     let serviceList = [
@@ -70,17 +163,18 @@ const Register = () => {
           </section>
     
            <section className='form'>
-            <form onSubmit={onSubmit}>
+            <form onSubmit={handleClick}>
               <div className='form-group'>
                 <input
                   type='text'
                   className='form-control'
                   id='userName'
                   name='userName'
-                  value={userName}
+                  value={formData.userName}
                   placeholder='Enter your name'
                   onChange={onChange}
                 />
+                <span className="text-danger">{errMsg.userName}</span>
               </div>
               <div className='form-group'>
                 <input
@@ -88,21 +182,23 @@ const Register = () => {
                   className='form-control'
                   id='email'
                   name='email'
-                  value={email}
+                  value={formData.email}
                   placeholder='Enter your email'
                   onChange={onChange}
                 />
+                <span className="text-danger">{errMsg.email}</span>
               </div>
               <div className='form-group'>
                 <input
-                  type='mobileNumber'
+                  type='text'
                   className='form-control'
                   id='mobileNumber'
-                  name='mobileNumber'
-                  value={mobileNumber}
-                  placeholder='Enter your mobile number'
+                  name='phoneNumber'
+                  value={formData.phoneNumber}
+                  placeholder='Enter your phone number'
                   onChange={onChange}
                 />
+                <span className="text-danger">{errMsg.phoneNumber}</span>
               </div>
               <div className='form-group'>
                 <input
@@ -110,10 +206,11 @@ const Register = () => {
                   className='form-control'
                   id='password'
                   name='password'
-                  value={password}
+                  value={formData.password}
                   placeholder='Enter password'
                   onChange={onChange}
                 />
+                <span className="text-danger">{errMsg.password}</span>
               </div>
               <div className='form-group'>
                 <input
@@ -121,10 +218,11 @@ const Register = () => {
                   className='form-control'
                   id='password2'
                   name='password2'
-                  value={password2}
+                  value={formData.password2}
                   placeholder='Confirm password'
                   onChange={onChange}
                 />
+                <span className="text-danger">{errMsg.password2}</span>
               </div>
               <div className='form-group'>
                 <input
@@ -132,24 +230,26 @@ const Register = () => {
                   className='form-control'
                   id='address'
                   name='address'
-                  value={address}
+                  value={formData.address}
                   placeholder='Enter your address'
                   onChange={onChange}
                 />
+                <span className="text-danger">{errMsg.address}</span>
               </div>
               <div className="form-group">
-                <select className='form-control' onChange={onChange} name="form">
+                <select className='form-control' onChange={onChange} name="serviceOffered">
                     <option value="Service you offer">Select a service</option>
                     {serviceList.map((services)=> <option value={services.value} key={serviceList.label}>{services.label}</option>)}
                 </select>
+                <span className="text-danger">{errMsg.serviceOffered}</span>
               </div>
               <div className='form-group'>
-                <button type='submit' className='btn2 btn2-block'>
+                <button disabled={!formValid} type='submit' className='btn2 btn2-block'>
                   Submit
                 </button>
               </div>
+              <span className="text-danger">{error}</span>
             </form>
-            <Link to='/login'><button id="signup"> "Have an account? Login"</button></Link>
           </section>
           </Card>
         </>

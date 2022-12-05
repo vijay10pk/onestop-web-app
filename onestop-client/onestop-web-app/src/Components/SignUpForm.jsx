@@ -84,12 +84,12 @@ const SignUpForm = ()=> {
 
       case "password":
         let passRegex = new RegExp(/^(?=.*[A-Z])(?=.*[!@#$&*%&])(?=.*[0-9])(?=.*[a-z]).{7,20}$/);
-        value === "" ? message = "Please enter your password" : passRegex.test(value) ? message = "" : message = "Please enter a valid password"
+        value === "" ? message = "Please enter your password" : passRegex.test(value) ? message = "" : message = "Please enter a valid password. Include atleast one uppercase, one special character[!@#$*%&] and one number"
         break
       
       case "password2":
         let pass2Regex = new RegExp(/^(?=.*[A-Z])(?=.*[!@#$&*%&])(?=.*[0-9])(?=.*[a-z]).{7,20}$/);
-        value === "" ? message = "Please enter your password" : !pass2Regex.test(value) ? message = "Please enter a valid password" : value===formData.password ? message='' : message = "Password mismatch"
+        value === "" ? message = "Please enter your password" : !pass2Regex.test(value) ? message = "Please enter a valid password. Include atleast one uppercase, one special character[!@#$*%&] and one number" : value===formData.password ? message='' : message = "Password mismatch"
         break
     
       case "userName":
