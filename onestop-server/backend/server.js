@@ -16,3 +16,6 @@ const appPort = 5000
 
 app.listen(appPort);
 console.log("Service Started at port:", appPort);
+
+
+module.exports = app
